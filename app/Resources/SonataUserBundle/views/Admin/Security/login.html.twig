@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"  {% block html_attributes %} class="no-js"
+	{% endblock %}>
+    <head>
+        <title>Admin Login</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{{ asset('themeadmin/css/bootstrap.min.css')}}" />
+		<link rel="stylesheet" href="{{ asset('themeadmin/css/bootstrap-responsive.min.css')}}" />
+        <link rel="stylesheet" href="{{ asset('themeadmin/css/unicorn.login.css')}}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+    <body>
+        <div id="logo">
+            <h1>Karismatik Admin</h1>
+        <div id="loginbox">            
+            <form id="loginform" class="form-vertical" action="{{ path("sonata_user_admin_security_check") }}" method="post" />
+				<p>Enter username and password to continue.</p>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span>
+                            	<input type="text" placeholder="Username" id="username" name="_username" value="{{ last_username }}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-lock"></i></span>
+                            	<input type="password" placeholder="Password" id="password" name="_password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <span class="pull-right"><input type="submit" class="btn btn-inverse" value="Login" /></span>
+                </div>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            </form>
+            
+        </div>
+        
+        <script src="{{ asset('themeadmin/js/jquery.min.js')}}"></script>  
+        <script src="{{ asset('themeadmin/js/unicorn.login.js')}}"></script> 
+    </body>
+</html>
