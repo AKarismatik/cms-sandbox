@@ -53,7 +53,6 @@ class AppKernel extends Kernel
 
             //PrestaCMS-Sandbox
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
-            new Application\Presta\CMSCoreBundle\ApplicationPrestaCMSCoreBundle(),
 
             new Presta\CMSContactBundle\PrestaCMSContactBundle(),
 
