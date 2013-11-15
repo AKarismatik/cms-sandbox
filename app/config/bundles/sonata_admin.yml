@@ -3,7 +3,7 @@ sonata_admin:
     title_logo: ./bundles/prestasonataadminextended/img/logo_title.jpg
     templates:
         # default global templates
-        layout:  ::custom_layout.html.twig
+        layout:  ::admin_layout.html.twig
     dashboard:
         blocks:
             -
