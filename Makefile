@@ -2,8 +2,6 @@ install:
 	app/console doctrine:database:drop --force
 	app/console doctrine:database:create
 	app/console doctrine:schema:create
-	app/console doctrine:phpcr:repository:init
-	app/console doctrine:phpcr:fixtures:load --no-interaction
 	app/console doctrine:fixture:load --no-interaction
 	chmod -R 777 app/database
 	app/console assets:install --symlink
