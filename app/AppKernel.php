@@ -26,9 +26,10 @@ class AppKernel extends Kernel
             new Sonata\SeoBundle\SonataSeoBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-
+        	new FOS\UserBundle\FOSUserBundle(),
             new Sonata\DoctrinePHPCRAdminBundle\SonataDoctrinePHPCRAdminBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+        	new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
 
             // Doctrine PHPCR
             new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
@@ -51,11 +52,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 
             //PrestaCMS-Sandbox
-            new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
             new Application\Presta\CMSCoreBundle\ApplicationPrestaCMSCoreBundle(),
 
-            new Sandbox\ServiceBundle\SandboxServiceBundle(),
             new Presta\CMSContactBundle\PrestaCMSContactBundle(),
 
             new CoopTilleuls\Bundle\CKEditorSonataMediaBundle\CoopTilleulsCKEditorSonataMediaBundle(),
@@ -65,6 +64,9 @@ class AppKernel extends Kernel
             new Presta\CMSSitemapBridgeBundle\PrestaCMSSitemapBridgeBundle(),
             new Presta\SitemapBundle\PrestaSitemapBundle(),
             new Presta\SonataAdminExtendedBundle\PrestaSonataAdminExtendedBundle(),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+        	new FOS\MessageBundle\FOSMessageBundle(),
+        	new Application\FOS\MessageBundle\ApplicationFOSMessageBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -9,9 +9,3 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Application\Sonata\UserBundle\Entity\User
-    registration:
-        confirmation:
-            enabled:    true
-        form:
-            type:  application_sonata_user_registration
-            name:  application_sonata_user_registration

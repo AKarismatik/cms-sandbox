@@ -12,6 +12,8 @@ imports:
     - { resource: bundles/presta_composer_public.yml}
     - { resource: bundles/presta_sonata_navigation.yml }
     - { resource: '@PrestaSonataAdminExtendedBundle/Resources/config/config.yml' }
+    - { resource: bundles/sonata_user.yml }
+    - { resource: bundles/fos_message.yml }
 
 framework:
     #esi:             ~
@@ -38,7 +40,6 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: false
     bundles:
-        - ApplicationSonataAdminBundle
         - ApplicationPrestaCMSCoreBundle
         - PrestaCMSCoreBundle
         - PrestaCMSThemeBasicBundle
