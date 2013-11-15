@@ -66,6 +66,7 @@ class AppKernel extends Kernel
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
         	new FOS\MessageBundle\FOSMessageBundle(),
         	new Application\FOS\MessageBundle\ApplicationFOSMessageBundle(),
+            new Karis\CmsBundle\KarisCmsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

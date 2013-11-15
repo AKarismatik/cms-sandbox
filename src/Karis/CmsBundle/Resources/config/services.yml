@@ -1,0 +1,7 @@
+parameters:
+#    karis_cms.example.class: Karis\CmsBundle\Example
+
+services:
+#    karis_cms.example:
+#        class: %karis_cms.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
