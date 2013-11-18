@@ -45,3 +45,15 @@ sonata_admin:
                 items:
                     - presta_cms_contact.admin.contact
                     - presta_cms_contact.admin.message
+                    
+            sonata_manage__email:
+                label: Manage Email
+                items: ~        
+                   
+services:
+                   
+   rj.email.admin:
+      class: Rj\EmailBundle\Admin\EmailTemplateAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: sonata_manage__email, label: Manage Email }
+      arguments: [null, Rj\EmailBundle\Entity\EmailTemplate, RjEmailBundle:EmailTemplateAdmin]
