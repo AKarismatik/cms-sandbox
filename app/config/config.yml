@@ -14,6 +14,8 @@ imports:
     - { resource: '@PrestaSonataAdminExtendedBundle/Resources/config/config.yml' }
     - { resource: bundles/sonata_user.yml }
     - { resource: bundles/fos_message.yml }
+    - { resource: bundles/rj_email.yml }
+    - { resource: bundles/sylius_settings.yml }
 
 framework:
     #esi:             ~

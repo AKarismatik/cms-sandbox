@@ -1,3 +1,0 @@
-karis_cms_homepage:
-    path:  /hello/{name}
-    defaults: { _controller: KarisCmsBundle:Default:index }

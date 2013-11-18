@@ -68,7 +68,12 @@
 
         "tilleuls/ckeditor-sonata-media-bundle": "2.3.*",
         "presta/composer-public-bundle": "1.*",
-        "ckeditor/ckeditor": "4.2.2"
+        "ckeditor/ckeditor": "4.2.2",
+        
+        "rj/email-bundle": "dev-master",
+        "sylius/settings-bundle": "1.0.*@dev"
+        
+        
     },
     "scripts":{
         "post-install-cmd":[

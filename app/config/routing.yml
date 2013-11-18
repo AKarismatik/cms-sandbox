@@ -1,7 +1,3 @@
-karis_cms:
-    resource: "@KarisCmsBundle/Resources/config/routing.yml"
-    prefix:   /
-
 application_sonata_user:
     resource: "@ApplicationSonataUserBundle/Resources/config/routing.yml"
     prefix:   /

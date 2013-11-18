@@ -66,7 +66,15 @@ class AppKernel extends Kernel
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
         	new FOS\MessageBundle\FOSMessageBundle(),
         	new Application\FOS\MessageBundle\ApplicationFOSMessageBundle(),
-            new Karis\CmsBundle\KarisCmsBundle(),
+
+        	// Manage application email templates.
+        	new Rj\EmailBundle\RjEmailBundle(),
+        		
+        	// Manage application Settings.
+        	new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Sylius\Bundle\SettingsBundle\SyliusSettingsBundle(),
+            new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
