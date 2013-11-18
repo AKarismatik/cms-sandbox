@@ -48,7 +48,11 @@ sonata_admin:
                     
             sonata_manage__email:
                 label: Manage Email
-                items: ~        
+                items: ~    
+                
+            sonata_manage__settings:
+                label: Manage Settings
+                items: ~         
                    
 services:
                    
@@ -57,3 +61,9 @@ services:
       tags:
         - { name: sonata.admin, manager_type: orm, group: sonata_manage__email, label: Manage Email }
       arguments: [null, Rj\EmailBundle\Entity\EmailTemplate, RjEmailBundle:EmailTemplateAdmin]
+      
+   sylius.settings.admin:
+      class: Application\Sylius\SettingsBundle\Admin\ParameterAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: sonata_manage__settings, label: Manage Email }
+      arguments: [null, Sylius\Bundle\SettingsBundle\Model\Parameter, ApplicationSyliusSettingsBundle:ParameterAdmin]  

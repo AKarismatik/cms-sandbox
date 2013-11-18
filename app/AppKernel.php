@@ -75,6 +75,7 @@ class AppKernel extends Kernel
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Sylius\Bundle\SettingsBundle\SyliusSettingsBundle(),
             new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
+            new Application\Sylius\SettingsBundle\ApplicationSyliusSettingsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
