@@ -55,17 +55,12 @@ _title = block('title') %} {% set _breadcrumb = block('breadcrumb') %}
 			<li class="btn btn-inverse"><a title="" href="#"><i
 					class="icon icon-user"></i> <span class="text">{% if app.user %}{{
 						app.user }}{% endif %} </span> </a></li>
-			<li class="btn btn-inverse dropdown" id="menu-messages"><a href="#"
-				data-toggle="dropdown" data-target="#menu-messages"
-				class="dropdown-toggle"><i class="icon icon-envelope"></i> <span
-					class="text">Messages</span> <span class="label label-important">5</span>
-					<b class="caret"></b> </a>
-				<ul class="dropdown-menu">
-					<li><a class="sAdd" title="" href="#">new message</a></li>
-					<li><a class="sInbox" title="" href="#">inbox</a></li>
-					<li><a class="sOutbox" title="" href="#">outbox</a></li>
-					<li><a class="sTrash" title="" href="#">trash</a></li>
-				</ul>
+			
+			<li class="btn btn-inverse"><a title="" href="{{ path('admin_presta_cmscontact_message_list') }}"><i
+					class="icon icon-envelope"></i> <span class="text">Messages</span>
+					<span class="label label-important">
+					
+					</span> </a>
 			</li>
 			<li class="btn btn-inverse"><a title="" href="{{ path('admin_sylius_settings_parameter_list') }}"><i
 					class="icon icon-cog"></i> <span class="text">Settings</span> </a>
@@ -172,36 +167,38 @@ _title = block('title') %} {% set _breadcrumb = block('breadcrumb') %}
 		</div>
 		<div class="container-fluid">
 			<div class="row-fluid">
-				{% block sonata_admin_content %}
+				<div class="content {{ _side_menu is not empty ? ' span10' : 'span12' }}">
+                        {% block sonata_admin_content %}
 
                             {% if _preview is not empty %}
-                                {{ _preview|raw }}
+                                <div class="sonata-ba-preview">{{ _preview|raw }}</div>
                             {% endif %}
 
                             {% if _content is not empty %}
-                                {{ _content|raw }}
+                                <div class="sonata-ba-content">{{ _content|raw }}</div>
                             {% endif %}
 
                             {% if _show is not empty %}
-                                {{ _show|raw }}
+                                <div class="sonata-ba-show">{{ _show|raw }}</div>
                             {% endif %}
 
                             {% if _form is not empty %}
-                                {{ _form|raw }}
+                                <div class="sonata-ba-form">{{ _form|raw }}</div>
                             {% endif %}
 
                             {% if _list_table is not empty or _list_filters is not empty %}
                                 <div class="row-fluid">
-                                    <div>
+                                    <div class="sonata-ba-list span10">
                                         {{ _list_table|raw }}
                                     </div>
-                                    <div>
+                                    <div class="sonata-ba-filter span2">
                                         {{ _list_filters|raw }}
                                     </div>
                                 </div>
                             {% endif %}
 
                         {% endblock %}
+                    </div>
 			</div>
 
 
