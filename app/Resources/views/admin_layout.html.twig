@@ -8,7 +8,7 @@ _title = block('title') %} {% set _breadcrumb = block('breadcrumb') %}
 <html lang="en"  {% block html_attributes %} class="no-js"
 	{% endblock %}>
 <head>
-<title>Unicorn Admin</title>
+<title>Karismatik Admin</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet"
@@ -28,12 +28,11 @@ _title = block('title') %} {% set _breadcrumb = block('breadcrumb') %}
 	{% if admin_pool is defined %} {% block logo %}
 	<div id="header">
 		
-		<h2>
-			<a href="{{ url('sonata_admin_dashboard') }}" class="brand"> <img
-				src="{{ asset(admin_pool.titlelogo) }}" alt="{{ admin_pool.title }}" />
+		<h1>
+			<a href="{{ url('sonata_admin_dashboard') }}"> 
 				{{ admin_pool.title }}
 			</a>
-		</h2>
+		</h1>
 	</div>
 	{% endblock %} {% endif %}
 	
@@ -68,7 +67,7 @@ _title = block('title') %} {% set _breadcrumb = block('breadcrumb') %}
 					<li><a class="sTrash" title="" href="#">trash</a></li>
 				</ul>
 			</li>
-			<li class="btn btn-inverse"><a title="" href="#"><i
+			<li class="btn btn-inverse"><a title="" href="{{ path('admin_sylius_settings_parameter_list') }}"><i
 					class="icon icon-cog"></i> <span class="text">Settings</span> </a>
 			</li>
 			<li class="btn btn-inverse"><a title=""
