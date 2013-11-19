@@ -1,9 +1,9 @@
 sonata_admin:
-    title:      Karis CMS Sandbox
+    title:      Presta CMS Sandbox
     title_logo: ./bundles/prestasonataadminextended/img/logo_title.jpg
     templates:
         # default global templates
-        layout:  ::admin_layout.html.twig
+        layout:  ApplicationSonataAdminBundle::custom_layout.html.twig
     dashboard:
         blocks:
             -
@@ -11,7 +11,7 @@ sonata_admin:
                 type: sonata.block.service.text
                 settings:
                     content: |
-                        <h2>Welcome in Karis CMS Sandbox</h2>
+                        <h2>Welcome in Presta CMS Sandbox</h2>
                         <p>
                             This is an early release and will be enhanced progressively.
                         </p>
@@ -31,12 +31,13 @@ sonata_admin:
                             We hope it will help you on your project.
                         </p>
                         <p>
-                            Karis CMS is based on Symfony CMF so we would like to thanks people working on it.
+                            Presta CMS is based on Symfony CMF so we would like to thanks people working on it.
                         </p>
                         <p>
-                            Karis CMS is sponsored by <a href="agencekarismatik.com/#presentation">Karismatik</a>
+                            Presta CMS is sponsored by <a href="http://www.prestaconcept.net">PrestaConcept</a>
                         </p>
-            - { position: right, type: sonata.admin.block.admin_list }
+            - { position: right, type: presta_sonata_admin_extended.block.dashboard.user }
+            - { position: right, type: presta_sonata_admin_extended.block.dashboard.media }
         groups:
             sonata_media: ~
 
@@ -45,28 +46,3 @@ sonata_admin:
                 items:
                     - presta_cms_contact.admin.contact
                     - presta_cms_contact.admin.message
-            sonata.user:
-                label: Manage Users
-                items:
-                    - sonata.user.admin.user 
-            sonata_manage_email:
-                label: Manage Email
-                items: ~    
-                
-            sonata_manage_settings:
-                label: Manage Settings
-                items: ~         
-                   
-services:
-                   
-   rj.email.admin:
-      class: Rj\EmailBundle\Admin\EmailTemplateAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: sonata_manage_email, label: Manage Email }
-      arguments: [null, Rj\EmailBundle\Entity\EmailTemplate, RjEmailBundle:EmailTemplateAdmin]
-      
-   sylius.settings.admin:
-      class: Application\Sylius\SettingsBundle\Admin\ParameterAdmin
-      tags:
-        - { name: sonata.admin, manager_type: orm, group: sonata_manage_settings, label: Manage Settings }
-      arguments: [null, Sylius\Bundle\SettingsBundle\Model\Parameter, ApplicationSyliusSettingsBundle:ParameterAdmin]  

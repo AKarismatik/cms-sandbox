@@ -1,11 +1,3 @@
-application_sylius_settings:
-    resource: "@ApplicationSyliusSettingsBundle/Resources/config/routing.yml"
-    prefix:   /
-
-application_sonata_user:
-    resource: "@ApplicationSonataUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
 #app/config/routing.yml
 PrestaSitemapBundle:
     resource: "@PrestaSitemapBundle/Resources/config/routing.yml"
@@ -15,24 +7,38 @@ presta_cms_contact:
     resource: "@PrestaCMSContactBundle/Resources/config/routing.xml"
     prefix:   /
 
+sandbox_service:
+    resource: "@SandboxServiceBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
-#Sonata Project
-admin:
-    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+presta_sonata_admin_extended:
+    resource: "@PrestaSonataAdminExtendedBundle/Resources/config/routing.yml"
+    prefix:   /
 
-_sonata_admin:
-    resource: .
-    type: sonata_admin
-    prefix: /admin
-
-#override sonata routes
-sonata_admin_dashboard:
-    pattern: /admin/dashboard
-    defaults: { _controller: SonataAdminBundle:Core:dashboard }
+##Sonata Project
+#admin:
+#    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+#    prefix: /admin/{_locale}
+#
+#_sonata_admin:
+#    resource: .
+#    type: sonata_admin
+#    prefix: /admin/{_locale}
+#
+##override sonata routes
+#sonata_admin_dashboard:
+#    pattern: /admin/{_locale}/
+#    defaults: { _controller: SonataAdminBundle:Core:dashboard }
 
 PrestaCMSCoreBundle:
     resource: "@PrestaCMSCoreBundle/Resources/config/routing.xml"
     prefix:   /admin/{_locale}/
+
+#presta_cms_page_redirect:
+#    pattern: /redirect
+#    defaults: {_controller: PrestaCMSCoreBundle:Page:redirect}
+
 
 #phpcrodmbrowser:
 #    resource: @SonataDoctrinePHPCRAdminBundle/Resources/config/routing/phpcrodmbrowser.xml
@@ -47,10 +53,6 @@ gallery:
 media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
-    
-sonata_user:
-    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
-    prefix: /admin
 
 #ajax
 paristime:

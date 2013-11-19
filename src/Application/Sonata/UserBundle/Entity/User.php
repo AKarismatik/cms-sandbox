@@ -1,35 +1,30 @@
 <?php
-
+/**
+ * This file is part of the PrestaCMS-Sandbox
+ *
+ * (c) PrestaConcept <www.prestaconcept.net>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace Application\Sonata\UserBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Sonata\UserBundle\Entity\BaseUser as BaseUser;
-use FOS\MessageBundle\Model\ParticipantInterface;
-
 
 /**
- * User
- *
- * @ORM\Table(name="fos_user_user")
- * @ORM\Entity
+ * @author Nicolas Bastien <nbastien@prestaconcept.net>
  */
-class User extends BaseUser implements ParticipantInterface
+class User extends BaseUser
 {
-	/**
-	 * @var integer
-	 *
-	 * @ORM\Column(name="id", type="integer")
-	 * @ORM\Id
-	 * @ORM\GeneratedValue(strategy="AUTO")
-	 */
-	protected  $id;
-
-
+    /**
+     * @var integer $id
+     */
+    protected $id;
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer $id
      */
     public function getId()
     {

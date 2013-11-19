@@ -26,10 +26,13 @@ class AppKernel extends Kernel
             new Sonata\SeoBundle\SonataSeoBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-        	new FOS\UserBundle\FOSUserBundle(),
+
             new Sonata\DoctrinePHPCRAdminBundle\SonataDoctrinePHPCRAdminBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-        	new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+
+            new FOS\UserBundle\FOSUserBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 
             // Doctrine PHPCR
             new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
@@ -52,8 +55,11 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 
             //PrestaCMS-Sandbox
+            new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
+            new Application\Presta\CMSCoreBundle\ApplicationPrestaCMSCoreBundle(),
 
+            new Sandbox\ServiceBundle\SandboxServiceBundle(),
             new Presta\CMSContactBundle\PrestaCMSContactBundle(),
 
             new CoopTilleuls\Bundle\CKEditorSonataMediaBundle\CoopTilleulsCKEditorSonataMediaBundle(),
@@ -63,19 +69,12 @@ class AppKernel extends Kernel
             new Presta\CMSSitemapBridgeBundle\PrestaCMSSitemapBridgeBundle(),
             new Presta\SitemapBundle\PrestaSitemapBundle(),
             new Presta\SonataAdminExtendedBundle\PrestaSonataAdminExtendedBundle(),
-            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-        	new FOS\MessageBundle\FOSMessageBundle(),
-        	new Application\FOS\MessageBundle\ApplicationFOSMessageBundle(),
-
-        	// Manage application email templates.
-        	new Rj\EmailBundle\RjEmailBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Presta\SonataGedmoDoctrineExtensionsBundle\PrestaSonataGedmoDoctrineExtensionsBundle(),
+            new Presta\CMSCKEditorBundle\PrestaCMSCKEditorBundle(),
+            new Presta\CMSFAQBundle\PrestaCMSFAQBundle(),
         		
-        	// Manage application Settings.
-        	new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
-            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-            new Sylius\Bundle\SettingsBundle\SyliusSettingsBundle(),
-            new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
-            new Application\Sylius\SettingsBundle\ApplicationSyliusSettingsBundle(),
+        	
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

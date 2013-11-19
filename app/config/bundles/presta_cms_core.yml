@@ -2,7 +2,7 @@ imports:
     - { resource: '@PrestaCMSThemeBasicBundle/Resources/config/theme/creative.yml' }
 
 parameters:
-    #presta_cms.page.factory.class: Application\Presta\CMSCoreBundle\Factory\PageFactory
+    presta_cms.page.factory.class: Application\Presta\CMSCoreBundle\Factory\PageFactory
 
 sonata_admin:
   dashboard:
@@ -19,14 +19,14 @@ presta_cms_core:
                 dev:
                     en:
                         locale: en
-                        host: cms_sandbox
+                        host: dev-prestacms-sandbox.com
                     fr:
                         locale: fr
-                        host: karis_cms_sandbox.fr
+                        host: dev-prestacms-sandbox.fr
                 prod:
                     en:
                         locale: en
-                        host: cms_sandbox
+                        host: sandbox.prestacms.com
                     fr:
                         locale: fr
-                        host:  karis_cms_sandbox.fr
+                        host:  sandbox.prestacms.fr

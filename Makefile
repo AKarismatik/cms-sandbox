@@ -1,12 +1,9 @@
-project-config:
-	curl -s http://getcomposer.org/installer | php
-	php composer.phar install
-	app/console assets:install web
-	app/console assetic:dump --env=prod
-    
 install:
+	app/console doctrine:database:drop --force
 	app/console doctrine:database:create
 	app/console doctrine:schema:create
+	app/console doctrine:phpcr:repository:init
+	app/console doctrine:phpcr:fixtures:load --no-interaction
 	app/console doctrine:fixture:load --no-interaction
 	chmod -R 777 app/database
 	app/console assets:install --symlink
@@ -14,17 +11,12 @@ install:
 	app/console presta:composer-public --force
 	app/console presta:composer-public --copy
 
-re-install:
-	app/console doctrine:database:drop --force
-	app/console doctrine:database:create
-	app/console doctrine:schema:create
-	app/console doctrine:fixture:load --no-interaction
-	chmod -R 777 app/database
-	app/console assets:install --symlink
+deploy-configure:
+	curl -s http://getcomposer.org/installer | php
+	php composer.phar install
+	app/console assets:install web
 	app/console assetic:dump --env=prod
-	app/console presta:composer-public --force
-	app/console presta:composer-public --copy
-	
+
 deploy-install:
 	rm -rf app/cache/*
 	chmod 777 app/database app/logs app/cache
@@ -43,10 +35,9 @@ r:
 
 cc:
 	rm -rf app/cache/*
-	app/console cache:clear
 
-ccc:
-	rm -rf app/cache/*
-	app/console cache:clear --env=prod
 cs:
 	phpcs --extensions=php -n --standard=PSR2 --report=full src
+
+ai:
+	app/console assets:install web

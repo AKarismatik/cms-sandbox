@@ -4,9 +4,6 @@ app/cache/*
 app/logs/*
 build/
 vendor
-.project
-.settings
-composer.lock
 composer.phar
 php-cs-fixer.phar
 app/config/phpcr.yml
