@@ -46,7 +46,8 @@ sonata_admin:
                     - presta_cms_contact.admin.contact
                     - presta_cms_contact.admin.message
             sonata.user:
-                label: Manage Users       
+                label: Manage Users 
+                items: ~~      
             sonata_manage_email:
                 label: Manage Email
                 items: ~    
