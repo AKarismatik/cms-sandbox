@@ -60,7 +60,10 @@
         "symfony-cmf/routing-bundle": "1.1.0",
         "symfony-cmf/tree-browser-bundle": "1.0.0",
 
-        "jackalope/jackalope-doctrine-dbal": "1.0.0"
+        "jackalope/jackalope-doctrine-dbal": "1.0.0",
+        "friendsofsymfony/message-bundle": "dev-master",
+        "rj/email-bundle": "dev-master",
+        "sylius/settings-bundle": "1.0.*@dev"
     },
     "scripts":{
         "post-install-cmd":[

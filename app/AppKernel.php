@@ -14,7 +14,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             //Sonata
@@ -73,7 +73,18 @@ class AppKernel extends Kernel
             new Presta\SonataGedmoDoctrineExtensionsBundle\PrestaSonataGedmoDoctrineExtensionsBundle(),
             new Presta\CMSCKEditorBundle\PrestaCMSCKEditorBundle(),
             new Presta\CMSFAQBundle\PrestaCMSFAQBundle(),
+
+        	// Manage application Settings.
+        	new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
+        	new Sylius\Bundle\SettingsBundle\SyliusSettingsBundle(),
+        	new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
+        	new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+        	new Application\Sylius\SettingsBundle\ApplicationSyliusSettingsBundle(),
+        	// Manage application email templates.
+        	new Rj\EmailBundle\RjEmailBundle(),
         		
+        	new FOS\MessageBundle\FOSMessageBundle(),
+        	new Application\FOS\MessageBundle\ApplicationFOSMessageBundle(),
         	
         );
 
