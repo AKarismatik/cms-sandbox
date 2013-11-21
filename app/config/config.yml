@@ -93,6 +93,7 @@ doctrine:
                     PrestaCMSContactBundle: ~
                     PrestaCMSFAQBundle: ~
                     ApplicationFOSMessageBundle: ~
+                    RjEmailBundle: ~
 
 stof_doctrine_extensions:
     default_locale: en

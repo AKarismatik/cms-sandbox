@@ -4,7 +4,7 @@ parameters:
     database_port:     ~
     database_name:     karis_cms_sandbox
     database_user:     root
-    database_password: azerty
+    database_password: kadala
     database_path:     null
 
     mailer_transport:  smtp
