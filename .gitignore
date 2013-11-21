@@ -3,6 +3,8 @@ app/bootstrap.php.cache
 app/cache/*
 app/logs/*
 build/
+.settings
+.project
 vendor
 composer.phar
 php-cs-fixer.phar
