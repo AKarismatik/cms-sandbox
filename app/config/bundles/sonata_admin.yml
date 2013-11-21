@@ -3,7 +3,7 @@ sonata_admin:
     title_logo: ./bundles/prestasonataadminextended/img/logo_title.jpg
     templates:
         # default global templates
-        layout:  ApplicationSonataAdminBundle::custom_layout.html.twig
+        layout:  ::admin_layout.html.twig
     dashboard:
         blocks:
             -
@@ -36,8 +36,7 @@ sonata_admin:
                         <p>
                             Presta CMS is sponsored by <a href="http://www.prestaconcept.net">PrestaConcept</a>
                         </p>
-            - { position: right, type: presta_sonata_admin_extended.block.dashboard.user }
-            - { position: right, type: presta_sonata_admin_extended.block.dashboard.media }
+            - { position: right, type: sonata.admin.block.admin_list }
         groups:
             sonata_media: ~
 
@@ -46,3 +45,25 @@ sonata_admin:
                 items:
                     - presta_cms_contact.admin.contact
                     - presta_cms_contact.admin.message
+                    
+            sonata_manage__email:
+                label: Manage Email
+                items: ~    
+                
+            sonata_manage__settings:
+                label: Manage Settings
+                items: ~         
+                   
+services:
+                   
+   rj.email.admin:
+      class: Rj\EmailBundle\Admin\EmailTemplateAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: sonata_manage__email, label: Manage Email }
+      arguments: [null, Rj\EmailBundle\Entity\EmailTemplate, RjEmailBundle:EmailTemplateAdmin]
+      
+   sylius.settings.admin:
+      class: Application\Sylius\SettingsBundle\Admin\ParameterAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: sonata_manage__settings, label: Manage Email }
+      arguments: [null, Sylius\Bundle\SettingsBundle\Model\Parameter, ApplicationSyliusSettingsBundle:ParameterAdmin]  
