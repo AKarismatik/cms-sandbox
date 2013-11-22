@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="PrestaSonataNavigation.en.xliff">
+        <body>
+            <trans-unit id="navigation.email.label">
+                <source>navigation.email.label</source>
+                <target>Emails</target>
+            </trans-unit>
+            <trans-unit id="navigation.email.list.label">
+                <source>navigation.email.list.label</source>
+                <target>List</target>
+            </trans-unit>
+             <trans-unit id="navigation.email.list.description">
+                <source>navigation.email.list.description</source>
+                <target></target>
+            </trans-unit>
+               <trans-unit id="navigation.email.new.label">
+                <source>navigation.email.new.label</source>
+                <target>New</target>
+            </trans-unit>
+            <trans-unit id="navigation.email.new.description">
+                <source>navigation.email.new.description</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="navigation.setting.label">
+                <source>navigation.setting.label</source>
+                <target>Settings</target>
+            </trans-unit>
+                 <trans-unit id="navigation.setting.list.label">
+                <source>navigation.setting.list.label</source>
+                <target>List</target>
+            </trans-unit>
+            <trans-unit id="navigation.setting.list.description">
+                <source>navigation.setting.list.description</source>
+                <target></target>
+            </trans-unit>
+             <trans-unit id="navigation.setting.new.label">
+                <source>navigation.setting.new.label</source>
+                <target>New</target>
+            </trans-unit>
+            <trans-unit id="navigation.setting.new.description">
+                <source>navigation.setting.new.description</source>
+                <target></target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
