@@ -44,7 +44,6 @@ assetic:
         - SonataAdminBundle
         - PrestaSonataAdminExtendedBundle
         - ApplicationSonataAdminBundle
-        - ApplicationPrestaCMSCoreBundle
         - PrestaCMSCoreBundle
         - PrestaCMSThemeBasicBundle
         - PrestaCMSContactBundle
@@ -91,7 +90,6 @@ doctrine:
 
                     ApplicationSonataUserBundle: ~
                     ApplicationSonataMediaBundle: ~
-                    ApplicationPrestaCMSCoreBundle: ~
                     PrestaCMSContactBundle: ~
                     PrestaCMSFAQBundle: ~
                     ApplicationFOSMessageBundle: ~
@@ -139,7 +137,6 @@ doctrine_phpcr:
         document_managers:
             default:
                 mappings:
-                    ApplicationPrestaCMSCoreBundle: ~
                     PrestaCMSCoreBundle: ~
                     CmfRoutingBundle: ~
                     CmfTreeBrowserBundle: ~

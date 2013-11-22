@@ -57,9 +57,7 @@ class AppKernel extends Kernel
             //PrestaCMS-Sandbox
             new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
             new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
-            new Application\Presta\CMSCoreBundle\ApplicationPrestaCMSCoreBundle(),
-
-            new Sandbox\ServiceBundle\SandboxServiceBundle(),
+            
             new Presta\CMSContactBundle\PrestaCMSContactBundle(),
 
             new CoopTilleuls\Bundle\CKEditorSonataMediaBundle\CoopTilleulsCKEditorSonataMediaBundle(),
