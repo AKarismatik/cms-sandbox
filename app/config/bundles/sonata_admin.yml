@@ -52,7 +52,7 @@ sonata_admin:
                 
             sonata_manage__settings:
                 label: Manage Settings
-                items: ~         
+                items: ~      
                    
 services:
                    
@@ -65,5 +65,5 @@ services:
    sylius.settings.admin:
       class: Application\Sylius\SettingsBundle\Admin\ParameterAdmin
       tags:
-        - { name: sonata.admin, manager_type: orm, group: sonata_manage__settings, label: Manage Email }
+        - { name: sonata.admin, manager_type: orm, group: sonata_manage__settings, label: Manage Settings }
       arguments: [null, Sylius\Bundle\SettingsBundle\Model\Parameter, ApplicationSyliusSettingsBundle:ParameterAdmin]  
