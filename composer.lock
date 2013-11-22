@@ -87,12 +87,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "v1.1.2"
+                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/v1.1.2",
-                "reference": "v1.1.2",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/40db0c96985aab2822edbc4848b3bd2429e02670",
+                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -193,7 +194,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -262,7 +263,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -334,7 +336,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -651,7 +654,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -1916,7 +1920,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -2058,12 +2062,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/Buzz.git",
-                "reference": "v0.10"
+                "reference": "759432d66387e3433d3b06cb6f773b97225b9b17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/v0.10",
-                "reference": "v0.10",
+                "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/759432d66387e3433d3b06cb6f773b97225b9b17",
+                "reference": "759432d66387e3433d3b06cb6f773b97225b9b17",
                 "shasum": ""
             },
             "require": {
@@ -2139,7 +2143,7 @@
             ],
             "description": "lessphp is a compiler for LESS written in PHP.",
             "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-10-04 15:40:57"
+            "time": "2013-03-02 16:13:31"
         },
         {
             "name": "liip/doctrine-cache-bundle",
@@ -2902,12 +2906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/prestaconcept/PrestaCMSThemeBasicBundle.git",
-                "reference": "1ee70e72a859b52de2a777c41eebf1940d62c489"
+                "reference": "16883ffeacf5d8fcdfe297cbf729812da2bb4da6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prestaconcept/PrestaCMSThemeBasicBundle/zipball/1ee70e72a859b52de2a777c41eebf1940d62c489",
-                "reference": "1ee70e72a859b52de2a777c41eebf1940d62c489",
+                "url": "https://api.github.com/repos/prestaconcept/PrestaCMSThemeBasicBundle/zipball/16883ffeacf5d8fcdfe297cbf729812da2bb4da6",
+                "reference": "16883ffeacf5d8fcdfe297cbf729812da2bb4da6",
                 "shasum": ""
             },
             "require": {
@@ -2949,7 +2953,7 @@
                 "prestaconcept",
                 "symfony-cmf"
             ],
-            "time": "2013-10-15 10:23:23"
+            "time": "2013-11-20 13:16:41"
         },
         {
             "name": "presta/composer-public-bundle",
@@ -5631,7 +5635,7 @@
             ],
             "authors": [
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com",
                     "homepage": "http://www.willdurand.fr"
                 }
