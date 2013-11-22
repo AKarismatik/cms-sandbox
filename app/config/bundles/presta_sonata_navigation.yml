@@ -12,3 +12,22 @@ presta_sonata_navigation:
                         route: presta_cms_theme
                     pages:
                         route: presta_cms_page_edit
+            email:
+                route: email_template_list 
+                roles:
+                    - ROLE_ADMIN_CMS
+                children:
+                    list:
+                        route: email_template_list
+                    new:
+                        route: email_template_create
+
+            setting: 
+                route: admin_sylius_settings_parameter_list 
+                roles:
+                    - ROLE_ADMIN_CMS
+                children:
+                    list:
+                        route: admin_sylius_settings_parameter_list
+                    new:
+                        route: admin_sylius_settings_parameter_create
